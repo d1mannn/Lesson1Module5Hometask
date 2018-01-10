@@ -263,7 +263,7 @@ int main()
 			} break;
 		}
 
-	} while (task <= 11);
+	} while (task < 12);
 
 
 }
