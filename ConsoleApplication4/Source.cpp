@@ -48,19 +48,53 @@ int main()
 			a.убывающую последовательность;
 			b.возрастающую последовательность*/
 
-			/*int m[8];
+			int m[8], m2[8];
 
-			for (int i = 0; i < 7; i++)
+			for (int i = 0; i < 8; i++)
 			{
 				m[i] = -100 + rand() % 200;
+				m2[i] = m[i];
 				cout << "»ндекс " << i + 1 << " = " << m[i] << endl;
 			}
 			cout << " ============ " << endl;
-			for (int i = 0; i < 7; i++)
+			/* ќтсортируем массив по убыванию */
+			for (int i = 1; i < 8; ++i)
 			{
-				if (m[i] > m[i - 1])
-					cout << m[i] << endl;
-			}*/
+				for (int r = 0; r < 8 - i; r++)
+				{
+					if (m[r] < m[r + 1])
+					{
+						// ќбмен местами
+						int temp = m[r];
+						m[r] = m[r + 1];
+						m[r + 1] = temp;
+					}
+				}
+			}
+			cout << "===============" << endl;
+			for (int i = 0; i < 8; i++)
+			{
+				cout << m[i] << endl;
+			}
+			cout << " ¬ќ«–ј—“јёўјя ѕќ—Ћ≈ƒќ¬ј“≈Ћ№Ќќ—“№ " << endl;
+			for (int i = 0; i < 8; i++)
+			{
+				for (int j = 0; j < 8 - 1; j++)
+				{
+					if (m2[j] > m2[j + 1])
+					{
+						int temp = m2[j];
+						m2[j] = m2[j + 1];
+						m2[j + 1] = temp;
+					}
+
+				}
+			}
+			cout << "===============" << endl;
+			for (int i = 0; i < 8; i++)
+			{
+				cout << m2[i] << endl;
+			}
 
 		} break;
 
